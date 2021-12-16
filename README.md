@@ -18,7 +18,7 @@ const game = new ChessCore()
 game.makeMove(startPosition, endPosition, true)
 ```
 
-The created 'game' object will give you access to the `board`, and the `status` of the game. Saving a game means saving these two objects and loading them back as required. No history of moves or logs are saved or part of this engine, it will be the user's task to save a history of moves if needed. 
+The created 'game' object will give you access to the `board`, and the `status` of the game. Saving a game means saving these two objects and loading them back as required. No history of moves or logs are saved as part the game, it will be the user's task to save a history of moves if needed. 
 
 Loading a previous game can be done via creation of a new game object with the parameters, or by directly setting the `board` and `status` properties on an existing object.
 
@@ -49,6 +49,6 @@ If you are using the font `CHEQ.ttf` to represent the chess peices, you can use 
 
 ## That's all
 
-This library is made for educational & non-commercial purpose only and may not adhere to all standards and protocols recommended by competitive/professional Chess organisations. It is used on https://chessroulett.app . You are free to use or modify it as you wish. No copyright infringement intended.
+This library is made for educational & non-commercial purpose only and may not adhere to all standards and protocols recommended by competitive/professional Chess organisations. It is used on https://chessroulette.app. You are free to use or modify it as you wish. No copyright infringement intended.
 
 
