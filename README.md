@@ -24,9 +24,9 @@ The created 'game' object will give you access to the `board`, and the `status` 
 
 `board` is a 2-D array representing each square on a chess-board consisting of horizontal rows and vertical columns represented numerically 0-7, starting at the left WHITE ROOK as (0,0). The elements of the array are chess pieces. Each square is either a `piece` or null.
 
-`piece` object has two properties - `color` and `type`. Import & use the ENUMS `EPieceColor` and `EPieceType` to represent these two values. Peices can be retrieved either directly from the board or by using the methods `getPiece()` or `getPieceAt()` on the game object.
+`piece` object has two properties - `color` and `type`. Import & use the ENUMS `EPieceColor` and `EPieceType` to represent these two values. Pieces can be retrieved either directly from the board or by using the methods `getPiece()` or `getPieceAt()` on the game object.
 
-`status` object gives information on the state of the game and is updated by the library after each move. It consists of the check-states of `white` and `black` Kings, castle-ability of Kings and Rooks, en-passant state of the pawns, and the general status of the game represented by `isCheckmate` or `isStalemate`. It also contains the information on whose turn it is - `currentTurn` property.
+`status` object gives information on the state of the game and is updated by the library after each move. It consists of the check-states of the Kings, castle-ability of Kings and Rooks, en-passant state of the pawns, and the general status of the game represented by `isCheckmate` or `isStalemate`. It also contains the information on whose turn it is - `currentTurn` property.
 
 ## Playing
 
