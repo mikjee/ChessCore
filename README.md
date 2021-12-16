@@ -18,7 +18,9 @@ const game = new ChessCore()
 game.makeMove(startPosition, endPosition, true)
 ```
 
-The created 'game' object will give you access to the `board`, and the `status` of the game. Saving a game means saving these two objects and loading them back as required. Loading them back can be done via creation of a new game object with the parameters, or by directly setting the `board` and `status` properties on an existing object.
+The created 'game' object will give you access to the `board`, and the `status` of the game. Saving a game means saving these two objects and loading them back as required. No history of moves or logs are saved or part of this engine, it will be the user's task to save a history of moves if needed. 
+
+Loading a previous game can be done via creation of a new game object with the parameters, or by directly setting the `board` and `status` properties on an existing object.
 
 ## Understanding the game object.
 
@@ -31,7 +33,9 @@ The created 'game' object will give you access to the `board`, and the `status` 
 ## Playing
 
 Make a move using the `makeMove()` method. The method takes in three parameters - `startPosition`, `endPoition` and `enforceTurns`.
-All positions are represented by an object with the properties `row` and `col`, corresponding to squares on the chess board. Performing a move updates the status object and the chess board, and returns any captured pieces from the move (if any, other null). Move will only be executed if it is a valid move. Invalid moves return `false`. Positions can be translated to Standard Chess Notation (A-H, 1-8) using the `translatePosition()` static method, but all inputs have to be in the format of the object type `TPosition` with `row` and `col` properties.
+All `position`s are represented by an object with the properties `row` and `col`, corresponding to squares on the chess board. Performing a move updates the `status` and `board`, and returns any captured pieces from the move (if any, otherwise null). 
+
+A move will only be executed if it is a valid move. Invalid moves return `false`. Positions can be translated to Standard Chess Notation (A-H, 1-8) using the `translatePosition()` static method, but all inputs have to be in the format of the object type `TPosition` with `row` and `col` properties.
 
 ## Validation & Moves Generation
 
